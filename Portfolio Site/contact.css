@@ -1,0 +1,44 @@
+.wrapper{
+	display:grid;
+	grid-template-columns: repeat(5, 17%);
+    grid-template-rows: repeat(15, 10%);
+	grid-gap: 10px;
+	margin-left: 20px;
+
+	grid-template-areas:
+	"....... ....... ....... ....... ......."
+	"....... header header header ......."
+	"....... ....... ....... ....... ......."
+	"....... contact_div contact_div contact_div ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... .......";
+}
+
+
+#contact{
+	/*align-self: center;*/
+	grid-area: contact_div;
+}
+
+.contact_methods{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	height: 50%;
+	/*width:75%;*/
+
+}
+
+.contact_methods h5{
+	font-size: 30px;
+}

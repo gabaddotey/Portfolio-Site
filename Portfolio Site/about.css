@@ -1,0 +1,76 @@
+.wrapper{
+	display:grid;
+	grid-template-columns: repeat(5, 17%);
+    grid-template-rows: repeat(15, 10%);
+	grid-gap: 10px;
+	margin-left: 20px;
+
+	grid-template-areas:
+	"....... header header header ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... whodiv whodiv whodiv"
+	"pic1 pic1 pic1 ....... ......."
+	"pic1 pic1 pic1 ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... award_div award_div award_div ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... ......."
+	"....... ....... ....... ....... .......";
+}
+
+
+#about,#awards{
+	padding:10px;
+	text-align: -webkit-center; /*WHY IS WEBKIT THE ONLY ONE THAT WORKS?!?*/
+}
+
+#about h3, #awards h3{
+	color:black;
+	-webkit-text-stroke: black 2px;
+	font-size: 80px;
+	position: relative;
+	width: fit-content;
+}
+
+#about p, #awards p{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+#about{
+	grid-area: whodiv;
+}
+
+#about_img, #about_img *{
+	grid-area: pic1;
+	width:400px;
+	height: 500px;
+
+	align-self: self-end;
+	justify-self: center;
+}
+
+#awards{
+	/*align-self: center;*/
+	grid-area: award_div;
+}
+
+.awrd_list{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	height: 50%;
+	/*width:75%;*/
+	column-gap: 10px;
+	row-gap: 30px;
+}
+
+.awrd_list h5{
+	font-size: 30px;
+}
