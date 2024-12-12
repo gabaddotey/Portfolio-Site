@@ -7,6 +7,7 @@
 
 	grid-template-areas:
 	"....... header header header ......."
+
 	"proj1 proj1 proj1 proj1 proj1"
 	"proj1 proj1 proj1 proj1 proj1"
 
@@ -24,6 +25,7 @@
 #proj1{
     grid-area: proj1;
 }
+
 
 #proj2{
     grid-area: proj2;
@@ -44,7 +46,7 @@
     width:95%;
     height:75%;
 
-	padding: 10px;
+	padding: 100px;
 
     /*border: solid 10px red;*/
 
@@ -60,21 +62,33 @@
 
 }
 
-.proj_img{
-	grid-area: img;
+.proj_content{
+	rotate: -2deg;
+}
 
-    width:400px;
-    height:500px;
-    background: rgb(252, 124, 146);
-	rotate: 255deg;
 
-	align-self: center;
-    justify-self: center;
+.proj_img, .proj_content {
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+	justify-self: center;
+
+    align-content: center;
+    justify-content: center;
+    display: grid;
+}
+
+.proj_img div{
+	position: absolute;
+
+	width: 35%;
+	height: 50%;
 }
 
 .proj_txt{
 	display: flex;
-	align-items: center;
+	align-content: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	height: 50%;
@@ -101,30 +115,39 @@
 	width: calc(100% + 0.25ch);
 }
 
-.orangebg{
-	width: 100%;
-	height: 100%;
-	rotate: 185deg;
+#pinkbg{
+	rotate:  -166deg;
+
+	background: rgb(252, 124, 146);
+
+	align-self: center;
+    justify-self: center;
+}
+
+#orangebg{
 	background: #FF6700;
 
+	rotate: -172deg;
+
 	align-self: center;
     justify-self: center;
 }
 
-.orangebg::after{
-	display: block;
-
-	content: "";
-	width: 100%;
-	height: 100%;
-	rotate: 6deg;
+#bluebg{
 	background: navy;
 
+	rotate: 3deg;
+
 	align-self: center;
     justify-self: center;
 }
 
 
-.proj_img:hover, .proj_img:hover > .orangebg{
+.proj_img:hover div{
 	transform: rotate(3deg);
+	
+}
+
+.proj_img:hover div:nth-child(1){
+	transition-delay: 75ms;
 }
